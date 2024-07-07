@@ -1,0 +1,152 @@
+git
+git config --global user.name "Dinakarluffy"
+git config --global user.email dinakarans862@gmail.com
+git config --list
+git config --glib core.editor "editor name"
+ls
+
+git clone https://github.com/Dinakarluffy/githubemc11.git
+
+git --version
+git status
+
+git add fiilname.format(it change the file untracked to tracked)
+
+git commit -m "Test.txt file added"(-m is verifictaion commit message)
+
+git push origin main (orgin=https://github.com/Dinakarluffy/githubemc11.git,main is the branch )
+
+Git Hub change  file from local local respositories to Remote respositories(system to internet):
+        insert(Any Modification) --> Add --> Commit --> Push 
+
+After Editing file you need to the above three commands evertime you Editing
+
+        ->git add fiilname.format
+        ->git commit -m "You write anything you want"
+        ->git push origin main
+
+if Anything change in github we need update our local respositories(system) use this comment
+   -->git pull
+
+cd .. = it is used to go to home folder
+
+If you create folder in system ,if you want to push the folder to git means follow the steps
+
+   -->git init(it chnge the system folder to empty git respositories)
+   -->git add .(It include multiple file at a time)
+   -->git remote add origin https://github.com/Dinakarluffy/githubemc22.git(You need to create new respository in git copy the link)
+   -->git branch (it help to know the branch name)
+   -->git branch -m main (It help to change branch name)
+   -->git push orgin branchName
+
+--> git branch -a (this comment help to how many branches in respository)
+
+if you want to create new branch in respository got to main and enter the  name of the branch
+   -->it show create branchName from main then click
+
+if you want to clone the newbranch from internet to system give comment like that
+   -->git pull
+   -->git pull origin main
+
+id you want to open new branch give comment like that,
+  -->git checkout branchName
+
+-->git diff branchName =it show the difference between the branches
+
+Merge two branches
+ -->git merge branchName 
+ then --> git push origin branchName
+
+ Create a branch via system
+ -->git branch newBranchName
+ then -->git push origin newBranchName
+ if the branch is not present in the respository means it automatically insert pr create a newBranchName.
+"
+Delete Branch name 
+--> git branch -d "branchName"
+
+ In reality we cannot access main branch(in work place),so we cannot use merge  so we use pull request(It's like we send notification to the boss,i want to merge my file to the main respository)
+ * go to pull request option in github 
+ * It show like first compare changes below
+   ==>base:main <- compare:main
+   ==>change the compare:main to which branch you need to pull request.
+
+ * And go to New pull request -> click
+ * It show many option one of them is Add comment 
+ * Click the add comment and type your comment and submit that.
+ * If higher official open his/her git hub it's show pull request notification.
+ * After checking his/her press merge fill-> confirm
+
+CONFLICT
+
+*it if we have a multiple branches then in branches programer change city name
+* The first branch submiter pull request to the boss,boss merge the file without CONFLICT
+*the second branch submiter pull request to the boss,boss face CONFLICT then boss manually correct the error.
+
+
+------------------------------------------------------------------------------------------------------------------------
+-**********************************************************************************************************************-
+------------------------------------------------------------------------------------------------------------------------
+
+# Notes - Git & GitHub Bootcamp
+
+## **Day 1: Introduction to Git**
+
+- **Introduction to Version Control**
+    - Importance of version control in software development.
+    - Brief comparison of Git with other version control systems.
+- **Setting Up and Configuring Git**
+    - Installing Git: **`git --version`** to check if Git is already installed.
+    - Setting user name: **`git config --global user.name "Your Name"`**.
+    - Setting user email: **`git config --global user.email "your_email@example.com"`**.
+- **Basic Git Operations**
+    - Initializing a new Git repository: **`git init`**.
+    - Cloning an existing repository: **`git clone <repository-url>`**.
+    - Checking status: **`git status`**.
+    - Adding changes to staging area: **`git add <file-name>`** or **`git add .`** for all changes.
+    - Committing changes: **`git commit -m "Commit message"`**.
+    - Viewing commit history: **`git log`**.
+- **Branching and Merging**
+    - Creating a new branch: **`git branch <branch-name>`**.
+    - Switching branches: **`git checkout <branch-name>`**.
+    - Merging branches: **`git merge <branch-name>`**.
+    - Resolving merge conflicts: Manual process, then **`git add <resolved-file>`**, and finally **`git commit`**.
+
+## **Day 2: Deep Dive into Git**
+
+- **Advanced Branching Techniques**
+    - Renaming branches: **`git branch -m <old-name> <new-name>`**.
+    - Deleting branches: **`git branch -d <branch-name>`**.
+- **Undoing Changes**
+    - Undoing working directory changes: **`git checkout -- <file-name>`**.
+    - Reverting commits: **`git revert <commit-hash>`**.
+    - Resetting to a previous commit: **`git reset --hard <commit-hash>`**.
+- **Stashing and Rebasing**
+    - Stashing changes: **`git stash`** and **`git stash apply`**.
+    - Rebasing: **`git rebase <base-branch>`**.
+- **Remote Repositories**
+    - Viewing remote repositories: **`git remote -v`**.
+    - Adding a remote repository: **`git remote add <name> <url>`**.
+    - Fetching from a remote repository: **`git fetch <remote-name>`**.
+    - Pulling from a remote repository: **`git pull <remote-name> <branch-name>`**.
+    - Pushing to a remote repository: **`git push <remote-name> <branch-name>`**.
+
+## **Day 3: Introduction to GitHub**
+
+- **Exploring GitHub**
+    - Creating and setting up a new GitHub account.
+    - Creating new repositories on GitHub.
+    - Understanding the GitHub interface and features.
+- **Collaborating on GitHub**
+    - Forking repositories: GitHub UI operation.
+    - Cloning a forked repository: **`git clone <fork-url>`**.
+    - Configuring a remote for a fork: **`git remote add upstream <original-repo-url>`**.
+    - Syncing a fork: **`git fetch upstream`** and then **`git merge upstream/<branch-name>`**.
+    - Making pull requests: GitHub UI operation.
+    - Reviewing and managing pull requests: GitHub UI operation.
+    - Opening, labeling, and closing issues: GitHub UI operation.
+- **GitHub Best Practices and Workflows**
+    - Writing good commit messages.
+    - Using branches for feature development.
+    - Pull request based workflows.
+    - Introduction to GitHub Actions for CI/CD.
